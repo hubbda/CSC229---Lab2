@@ -1,4 +1,5 @@
 package com.mycompany.csc229_211review_lab02hw;
+import java.util.Scanner;
 
 /**
  *
@@ -13,12 +14,21 @@ public class DriverClass {
 		
 		// ToDo 7: Add a toString method for Student class
 		
-		Student std1= new Student("James", 20);
+		Student std1= new Student("James", (short) 20);
 		
 		// ToDo 8: Set the gpa of the student using the scanner and user
 		// 			input and then print the output.
-		
-		System.out.println(std1);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter student gpa: ");
+		//read user input and set gpa
+		std1.setGpa(sc.nextDouble());
+
+		//sets address
+		std1.setAddress("123 Dr");
+
+		//print out student info
+		System.out.println(std1.toString());
 		
 		// ToDo 9: add comments and explain your code
 		
